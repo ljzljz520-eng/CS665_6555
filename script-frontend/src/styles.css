@@ -1,0 +1,18 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #202124; background: #f5f6f7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { height: 56px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #d8dadd; }
+nav { display: flex; gap: 4px; }
+button { border: 1px solid #c7c9cc; background: #fff; min-height: 36px; padding: 0 12px; cursor: pointer; }
+main { width: min(960px, 100%); margin: 0 auto; padding: 24px; }
+.bar { display: flex; align-items: center; justify-content: space-between; }
+h1 { font-size: 24px; }
+h2 { font-size: 18px; margin-top: 28px; }
+label { display: block; margin: 16px 0; font-size: 13px; }
+input, textarea { display: block; width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #b7babf; background: #fff; font: inherit; }
+textarea { min-height: 100px; resize: vertical; }
+.script-row { width: 100%; min-height: 58px; display: grid; grid-template-columns: 1fr 160px 100px; align-items: center; text-align: left; border-width: 0 0 1px; }
+.script-row small { text-align: right; color: #62666b; }
+#scenes, pre { white-space: pre-wrap; background: #fff; border: 1px solid #d8dadd; padding: 16px; line-height: 1.6; }
+pre { min-height: 480px; font-family: "Courier New", monospace; }
+@media (max-width: 620px) { main { padding: 16px; } .script-row { grid-template-columns: 1fr 90px; } .script-row small { display: none; } }

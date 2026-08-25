@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Script Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><strong>Script Studio</strong><nav><button data-view="list">剧本</button><button data-view="edit">编辑</button><button data-view="preview">预览</button></nav></header>
+  <main>
+    <section id="list"><div class="bar"><h1>剧本</h1><button id="new-script">新建</button></div><div id="scripts"></div></section>
+    <section id="edit" hidden><div class="bar"><h1>编辑剧本</h1><button id="save-script">保存</button></div><label>标题<input id="title"></label><label>一句话梗概<textarea id="logline"></textarea></label><label>类型<input id="genre"></label><h2>场次</h2><div id="scenes"></div><button id="add-scene">添加场次</button></section>
+    <section id="preview" hidden><div class="bar"><h1>阅读预览</h1><button id="refresh-preview">刷新</button></div><pre id="reading"></pre></section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

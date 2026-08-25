@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "metrics": {
+    "production_loc": 2940,
+    "production_files": 18,
+    "production_packages": 8,
+    "test_files": 9,
+    "production_functions": 68,
+    "decision_points": 160
+  },
+  "persistence": {
+    "module": "go.etcd.io/bbolt",
+    "entities": [
+      "Script",
+      "Scene",
+      "Character",
+      "Dialogue",
+      "DraftState"
+    ],
+    "reopen_test": "TestPersistenceSurvivesReopen"
+  },
+  "workflows": [
+    {
+      "steps": [
+        "create a script with title, logline, and genre",
+        "add an ordered scene to the script",
+        "revise the script title and revision",
+        "reload the saved workspace"
+      ],
+      "test": "TestWorkflowCreateScript"
+    },
+    {
+      "steps": [
+        "create a script for dialogue composition",
+        "add a scene and a character",
+        "add an ordered character dialogue",
+        "reload the dialogue list"
+      ],
+      "test": "TestWorkflowComposeDialogue"
+    },
+    {
+      "steps": [
+        "complete a script with scene, character, and dialogue",
+        "transition the draft into draft state",
+        "validate and publish the script",
+        "reload the published workspace for preview"
+      ],
+      "test": "TestWorkflowPublishPreview"
+    }
+  ]
+}
